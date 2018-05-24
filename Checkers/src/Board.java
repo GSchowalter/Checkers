@@ -7,9 +7,20 @@
  */
 public class Board {
 
-	private boolean[][] spaces = new boolean[8][8];
+	private Space[][] spaces = new Space[8][8];
 
-	public boolean getSpace(int x, int y) {
+	public Board()
+	{
+		for (int i = 0; i < spaces.length; i++)
+		{
+			for (int j = 0; j < spaces[i].length; j++)
+			{
+				spaces[i][j] = new Space();
+			}
+		}
+	}
+	
+	public Space getSpace(int x, int y) {
 		return spaces[x][y];
 	}
 
@@ -47,3 +58,4 @@ public class Board {
 		}
 	}
 }
+
