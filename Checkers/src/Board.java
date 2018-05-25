@@ -15,13 +15,13 @@ public class Board {
 		{
 			for (int j = 0; j < spaces[i].length; j++)
 			{
-				spaces[i][j] = new Space();
+				spaces[i][j] = new Space(i, j);
 			}
 		}
 	}
 	
-	public Space getSpace(int x, int y) {
-		return spaces[x][y];
+	public Space getSpace(int d, int e) {
+		return spaces[d][e];
 	}
 
 	public void draw(int size) {
